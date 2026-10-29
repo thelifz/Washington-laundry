@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASHINGTON LAUNDRY</title>
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <link rel="stylesheet" href="style.css?v=39">
+    <!-- Google Fonts for Luxury Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="luxury-theme">
+
+    <!-- MINIMAL HEADER -->
+    <header id="jesko-header" class="hidden-header">
+        <div class="header-container">
+            <nav class="header-nav">
+                <a href="#about-section">About Us</a>
+                <a href="#pricing-section">Pricing</a>
+                <a href="#locations-section">Locations</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- SECTION 1: HERO SCENE -->
+            <section id="hero-sequence" style="position: relative; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                
+                <!-- Background Image -->
+                <img id="hero-image" src="assets/about-bg.jpg" alt="Luxury Background" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1;">
+                
+                <!-- Seamless Fade Overlay -->
+                <div id="video-darken-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to bottom, rgba(76,29,149,0.4) 0%, rgba(0,0,0,0.1) 60%, rgba(243,240,255,1) 100%); z-index: 5; pointer-events: none;"></div>
+
+                <!-- Central Content -->
+                <div class="hero-center-content">
+                    <h1 class="vanish-text hero-brand-title">WASHINGTON</h1>
+                    <p class="vanish-text hero-brand-sub">Premium Laundry & Dry Cleaning</p>
+                    
+                    <a href="#pricing-section" class="book-now-pill vanish-text">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Intro Layer (Splash Screen) -->
+                <div id="dark-intro">
+                    <div class="logo-text-group">
+                        <h1 class="logo-text text-center">WASHINGTON</h1>
+                        <h2 class="logo-subtext text-center" style="color: var(--violet-light); margin-top: 20px; letter-spacing: 20px;">LAUNDRY</h2>
+                    </div>
+                </div>
+
+            </section> <!-- End hero-sequence -->
+
+    <!-- SECTION 3: ABOUT US -->
+    <section id="about-section">
+        <div class="content-wrapper about-wrapper">
+            
+            <!-- Title -->
+            <div class="vanish-text about-title-block">
+                <p class="about-eyebrow">Who We Are</p>
+                <h2 class="section-title">The Washington<br>Promise</h2>
+            </div>
+
+            <!-- About paragraphs -->
+            <div class="vanish-text about-grid">
+                <div>
+                    <p class="about-text">
+                        Behind every perfectly folded garment is a team of over <strong class="text-highlight">80 smiling, passionate professionals</strong> who treat your clothes like their own. We don't just do laundry — we deliver confidence, comfort, and care right to your door.
+                    </p>
+                    <p class="about-text">
+                        Our state-of-the-art facility runs <strong class="text-highlight">industrial-grade, modern washing machines</strong> engineered to handle everything from everyday casuals to the most delicate silk — all without compromising the fabric's integrity or colour.
+                    </p>
+                    <p class="about-text">
+                        We combine advanced textile science with a human touch — <strong class="text-highlight">precision, warmth, and zero shortcuts.</strong> That's the Washington Laundry way.
+                    </p>
+                </div>
+                <div>
+                    <p class="about-text">
+                        Founded in Orkkatteri, Kozhikode, we have grown into <strong class="text-highlight">Kerala's most trusted laundry service</strong> — powered by community, driven by excellence, and obsessed with the details that make your wardrobe shine.
+                    </p>
+                    <p class="about-text">
+                        From pickup to delivery, every step is handled with <strong class="text-highlight">surgical precision</strong> — sorted, treated, washed, dried, folded, and packaged to perfection. No guesswork. No shortcuts. Just results.
+                    </p>
+                    <p class="about-text">
+                        Whether it's a single shirt or an entire wardrobe refresh, <strong class="text-highlight">we're ready to get it done</strong> — with a smile, every single time.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="vanish-text about-stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">80<span>+</span></div>
+                    <div class="stat-label">Happy Workers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500<span>+</span></div>
+                    <div class="stat-label">Orders Daily</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24<span>hr</span></div>
+                    <div class="stat-label">Turnaround</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100<span>%</span></div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: PRICING & SERVICES -->
+    <section id="pricing-section" class="luxury-section">
+        <div class="content-wrapper">
+            <h2 class="section-title vanish-text text-center">PRICING & SERVICES</h2>
+            
+            <div class="zig-zag-container">
+                <!-- Wash & Fold -->
+                <div class="pricing-item zz-left vanish-text">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--violet-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Washing Machine Body -->
+                            <rect x="3" y="3" width="11" height="18" rx="2" ry="2"/>
+                            <path d="M3 7h11"/> <!-- Control panel line -->
+                            <!-- Door and Drum -->
+                            <circle cx="8.5" cy="13" r="4"/>
+                            <circle cx="8.5" cy="13" r="2"/> <!-- Drum detail -->
+                            <!-- Buttons -->
+                            <circle cx="5" cy="5" r="0.5" fill="currentColor" stroke="none"/>
+                            <circle cx="7" cy="5" r="0.5" fill="currentColor" stroke="none"/>
+                            <line x1="9" y1="5" x2="11" y2="5"/>
+                            <line x1="10" y1="4" x2="11" y2="4"/>
+                            <!-- Folded Stack of Clothes -->
+                            <path d="M15 21h7l-1-2h-5z"/>
+                            <path d="M15 19h6l-1-2h-4z"/>
+                            <path d="M15 17h5l-1-2h-3z"/>
+                        </svg>
+                    </div>
+                    <h3>Wash & Fold</h3>
+                    <div class="service-desc">
+                        <p>Premium care for everyday garments</p>
+                        <p>Sorted, washed, and neatly folded</p>
+                        <p>Ready to go straight into your closet</p>
+                    </div>
+                </div>
+
+                <!-- Wash & Iron -->
+                <div class="pricing-item zz-right vanish-text">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--violet-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Clothes Stack -->
+                            <path d="M3 21 h18 l-1.5-2 H4.5 l-1.5 2 z"/>
+                            <path d="M4.5 19 h15 l-1.5-2 H6 l-1.5 2 z"/>
+                            <!-- Iron Body -->
+                            <path d="M5 16 C 4.5 12 7 8 10 8 h5 c2 0 4 2 4 4 v4 H5 z"/>
+                            <!-- Handle Cutout -->
+                            <path d="M10 11 h4 c1 0 2 1 2 2 v1 H8.5 c0.5-1.5 0.5-3 1.5-3 z"/>
+                            <!-- Cord Loop -->
+                            <path d="M19 13 c2 0 2 3 0 4"/>
+                        </svg>
+                    </div>
+                    <h3>Wash & Iron</h3>
+                    <div class="service-desc">
+                        <p>Flawless pressing for a crisp finish</p>
+                        <p>Stain removal & fabric conditioning</p>
+                        <p>Perfect for office wear & casuals</p>
+                        <p>Delivered on hangers or neatly packed</p>
+                    </div>
+                </div>
+
+                <!-- Express Laundry -->
+                <div class="pricing-item zz-left vanish-text">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--violet-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Stopwatch Body -->
+                            <circle cx="13" cy="13" r="8"/>
+                            <!-- Clock ticks -->
+                            <line x1="13" y1="5" x2="13" y2="7"/>
+                            <line x1="13" y1="21" x2="13" y2="19"/>
+                            <line x1="5" y1="13" x2="7" y2="13"/>
+                            <line x1="21" y1="13" x2="19" y2="13"/>
+                            <!-- Hands -->
+                            <path d="M13 9v4l2 2"/>
+                            <!-- Buttons -->
+                            <path d="M13 5V2"/>
+                            <path d="M11 2h4"/>
+                            <path d="M18 7.5l1.5-1.5"/>
+                            <path d="M18 5l2 2"/>
+                            <!-- Dynamic Motion Lines -->
+                            <path d="M3 13H1"/>
+                            <path d="M4 9H2"/>
+                            <path d="M4 17H2"/>
+                        </svg>
+                    </div>
+                    <h3>Express Laundry</h3>
+                    <div class="service-desc">
+                        <p>Lightning fast 24-hour turnaround</p>
+                        <p>Priority processing & handling</p>
+                        <p>Same day delivery available</p>
+                    </div>
+                </div>
+
+                <!-- Dry Cleaning -->
+                <div class="pricing-item zz-right vanish-text">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--violet-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Hanger Hook -->
+                            <path d="M12 6V5a2 2 0 10-2-2"/>
+                            <!-- Neck Hole -->
+                            <path d="M10 9a2 2 0 004 0"/>
+                            <!-- Garment Bag Shoulders and Body -->
+                            <path d="M12 6L5 9v11a2 2 0 002 2h10a2 2 0 002-2V9L12 6z"/>
+                            <!-- Zipper line -->
+                            <path d="M12 9v13"/>
+                            <!-- Zipper Pull Tab -->
+                            <rect x="11.5" y="11" width="1" height="2" rx="0.5"/>
+                            <!-- Suit collar detail -->
+                            <path d="M10 9l2 3 2-3"/>
+                        </svg>
+                    </div>
+                    <h3>Dry Cleaning</h3>
+                    <div class="service-desc">
+                        <p>Gentle solvent-based cleaning</p>
+                        <p>Safe for delicate & designer fabrics</p>
+                        <p>Odor extraction & color protection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: HOW IT WORKS & PROMISE -->
+    <section id="how-it-works-section" class="luxury-section bg-secondary" style="position: relative; overflow: hidden; background: transparent;">
+        
+        <!-- GIANT BACKGROUND MATH WATERMARK -->
+        <div class="math-watermark" style="position: absolute; top: 20%; left: -10%; font-size: 12vw; font-family: 'Cinzel', serif; font-weight: 800; color: rgba(139, 92, 246, 0.03); white-space: nowrap; pointer-events: none; transform: rotate(-5deg);">
+            ∫(Care)dt = ∞
+        </div>
+
+        <div class="content-wrapper text-center" style="padding-top: 80px; position: relative; z-index: 2;">
+            
+            <!-- SECTION TITLE ABOVE -->
+            <div class="section-title-wrapper vanish-text">
+                <h3 class="how-title">How It Works</h3>
+                <p class="how-sub">The trajectory of pristine garment care.</p>
+            </div>
+
+            <!-- CENTERED EQUATION (MATH FONT) -->
+            <div id="html-math-equation" class="vanish-text">
+                <h2 class="math-equation-formula">Aura(t) = ∫(Care)dt + sin(x)</h2>
+                <p class="math-equation-sub">*GUARANTEED +10,000 AURA INCREASE FOR YOUR CLOTHES</p>
+            </div>
+
+            <div class="process-graph-container vanish-text" style="margin-bottom: 80px;">
+                <svg viewBox="-100 -50 1100 450" width="100%" height="100%" id="math-graph-svg">
+                    <defs>
+                        <marker id="axis-arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-main)" />
+                        </marker>
+                        <pattern id="grid" width="100" height="50" patternUnits="userSpaceOnUse">
+                            <path d="M 100 0 L 0 0 0 50" fill="none" stroke="rgba(139, 92, 246, 0.07)" stroke-width="1"/>
+                        </pattern>
+                        <!-- Gradient for Area Glow -->
+                        <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="var(--violet-light)" stop-opacity="0.3" />
+                            <stop offset="100%" stop-color="var(--violet-light)" stop-opacity="0.0" />
+                        </linearGradient>
+                        <!-- Clip Path to animate the Area Fill -->
+                        <clipPath id="area-clip">
+                            <rect x="0" y="-50" width="0" height="400" id="area-clip-rect" />
+                        </clipPath>
+                    </defs>
+
+                    <rect x="0" y="0" width="900" height="300" fill="url(#grid)" />
+
+                    <!-- The Glowing Area Fill (Clipped for animation) -->
+                    <path id="math-area" d="M 0 250 C 400 250, 450 50, 900 50 L 900 300 L 0 300 Z" fill="url(#area-gradient)" clip-path="url(#area-clip)"/>
+
+                    <!-- Y-Axis (Aura(t)) -->
+                    <line x1="0" y1="300" x2="0" y2="0" stroke="var(--text-main)" stroke-width="2" marker-end="url(#axis-arrow)"/>
+                    <text x="-30" y="150" transform="rotate(-90 -30 150)" font-family="var(--font-luxury)" font-size="18" fill="var(--text-main)" text-anchor="middle" font-weight="600">Garment Aura A(t)</text>
+
+                    <!-- X-Axis (t) -->
+                    <line x1="0" y1="300" x2="950" y2="300" stroke="var(--text-main)" stroke-width="2" marker-end="url(#axis-arrow)"/>
+                    <text x="450" y="350" font-family="var(--font-luxury)" font-size="18" fill="var(--text-main)" text-anchor="middle" font-weight="600">Time (t)</text>
+
+                    <!-- Math Curve -->
+                    <path id="math-curve" d="M 0 250 C 400 250, 450 50, 900 50" fill="none" stroke="var(--violet-light)" stroke-width="4"/>
+
+                    <!-- Nodes -->
+                    <g class="graph-node" id="node-1" transform="translate(80, 250)" style="opacity: 0;">
+                        <circle cx="0" cy="0" r="10" class="node-dot"/>
+                        <text x="0" y="35" class="graph-title" text-anchor="middle">Book Order</text>
+                    </g>
+
+                    <g class="graph-node" id="node-2" transform="translate(285, 207)" style="opacity: 0;">
+                        <circle cx="0" cy="0" r="10" class="node-dot"/>
+                        <text x="-25" y="-15" class="graph-title" text-anchor="end">Pickup</text>
+                    </g>
+
+                    <g class="graph-node" id="node-3" transform="translate(582, 93)" style="opacity: 0;">
+                        <circle cx="0" cy="0" r="10" class="node-dot"/>
+                        <text x="-25" y="5" class="graph-title" text-anchor="end">Wash & Fold</text>
+                    </g>
+
+                    <g class="graph-node" id="node-4" transform="translate(900, 50)" style="opacity: 0;">
+                        <circle cx="0" cy="0" r="10" class="node-dot"/>
+                        <text x="0" y="-25" class="graph-title" text-anchor="middle">Delivery</text>
+                    </g>
+                </svg>                        
+            </div>
+
+            <p class="vanish-text smooth-lead mt-12">We ensure all this goes very smoothly, which brings us to...</p>
+            <div class="promise-bulge-container">
+                <h1 id="promise-bulge-text">PROMISE</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="promise-list-section" class="luxury-section" style="background: transparent;">
+        <div class="content-wrapper">
+            <h2 class="vanish-text text-center section-title">We promise you</h2>
+            <div class="promise-grid">
+                <div class="promise-card vanish-text">
+                    <h4>Free pick & drop</h4>
+                    <p class="promise-desc">We provide Free pick & drop facility at your doorstep.</p>
+                </div>
+                <div class="promise-card vanish-text">
+                    <h4>Affordable</h4>
+                    <p class="promise-desc">Our pricing policy is fair & transparent. What you see is what you pay!</p>
+                </div>
+                <div class="promise-card vanish-text">
+                    <h4>Quality assurance</h4>
+                    <p class="promise-desc">We strive to give the best laundry & dry cleaning experience.</p>
+                </div>
+                <div class="promise-card vanish-text">
+                    <h4>Convenience</h4>
+                    <p class="promise-desc">Book your service in less than 20 seconds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- SECTION 6: GLOBE & LOCATIONS -->
+            <section id="locations-section">
+                <div id="location-title-overlay">
+                    <h2 class="section-title location-title-text">Our Location</h2>
+                </div>
+                
+                <div class="globe-container" id="locations-sequence">
+                    <canvas id="sea-globe-canvas"></canvas>
+                    
+                    <div class="location-pin" id="pin-orkkatteri">
+                        <div class="pin-dot pulsing"></div>
+                        <div class="pin-address">
+                            <strong>WASHINGTON LAUNDRY & DRY CLEANING</strong>
+                            <span>Nadapuram-Vadakara Road, Near Sreekrishna Carwash</span>
+                            <span>Orkkatteri, Kozhikode, Kerala 673501</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- MINIMAL FOOTER -->
+            <footer id="jesko-footer">
+                <div class="footer-line"></div>
+                <div class="footer-content">
+                    <a href="tel:8073896391">+91 8073896391</a>
+                    <a href="mailto:BUD.websitedeveloping@gmail.com">BUD.websitedeveloping@gmail.com</a>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- App Scripts -->
+    <script src="script.js?v=39"></script>
+</body>
+</html>
