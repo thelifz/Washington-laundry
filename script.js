@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         scale: isMobileView ? 1.15 : 1.5,
         letterSpacing: isMobileView ? "8px" : "20px",
-        color: "#8b5cf6", // Violet instead of white since background is white now
+        color: "#ca8a04", // Violet instead of white since background is white now
         webkitTextStroke: "0px",
-        textShadow: "0 0 40px rgba(139, 92, 246, 0.4)",
+        textShadow: "0 0 40px rgba(234, 179, 8, 0.45)",
         ease: "power2.out"
     });
 
@@ -241,9 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if(world) {
             gctx.beginPath();
             path(world);
-            gctx.fillStyle = "rgba(139, 92, 246, 0.15)";
+            gctx.fillStyle = "rgba(234, 179, 8, 0.18)";
             gctx.fill();
-            gctx.strokeStyle = "rgba(76, 29, 149, 0.4)";
+            gctx.strokeStyle = "rgba(67, 55, 6, 0.45)";
             gctx.lineWidth = 1;
             gctx.stroke();
         }

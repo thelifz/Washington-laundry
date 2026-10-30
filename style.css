@@ -1,17 +1,24 @@
 :root {
   /* Intro Colors */
-  --bg-intro: #0b0710;
+  --bg-intro: #0e0d04;
   
-  /* Main Site Colors (White theme as requested) */
+  /* Main Site Colors (Lemon Refreshing theme) */
   --bg-main: #ffffff;
-  --bg-secondary: #f8fafc;
+  --bg-secondary: #fefce8;
   --text-main: #1f2937;
-  --text-light: #6b7280;
+  --text-light: #57534e;
   
-  /* Brand Colors */
-  --violet-light: #8b5cf6;
-  --purple-deep: #4c1d95;
+  /* Brand Lemon Refreshing Colors */
+  --lemon-refresh: #ca8a04; /* Rich crisp Meyer lemon for text & accents */
+  --lemon-bright: #eab308;  /* Sunny vibrant lemon zest */
+  --lemon-glow: #facc15;    /* Luminous sunny spark */
+  --lemon-deep: #433706;    /* Deep luxury citrus noir */
+  --lemon-bg: #fefce8;      /* Refreshing morning lemon base */
   --white: #ffffff;
+  
+  /* Theme mappings for instant compatibility */
+  --violet-light: #ca8a04;
+  --purple-deep: #433706;
   
   /* Fonts */
   --font-luxury: 'Cinzel', serif;
@@ -25,13 +32,13 @@
 }
 
 body {
-  background-color: #f3f0ff;
+  background-color: #fefce8;
   background-image: 
-    radial-gradient(ellipse at 15% 10%,  rgba(221, 214, 254, 0.7) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 20%,  rgba(196, 181, 253, 0.5) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 60%,  rgba(237, 233, 254, 0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 0%  100%, rgba(139,  92, 246, 0.12) 0%, transparent 45%),
-    radial-gradient(ellipse at 100% 80%, rgba(76,   29, 149, 0.10) 0%, transparent 45%);
+    radial-gradient(ellipse at 15% 10%,  rgba(254, 240, 138, 0.65) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%,  rgba(253, 224, 71, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 60%,  rgba(254, 249, 195, 0.70) 0%, transparent 60%),
+    radial-gradient(ellipse at 0%  100%, rgba(234, 179, 8, 0.14) 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 80%, rgba(202, 138, 4, 0.12) 0%, transparent 45%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -107,7 +114,7 @@ body {
   align-items: center;
   justify-content: center;
   /* White with a little bit of purple shade */
-  background: radial-gradient(circle at center, #ffffff 0%, #f8f4ff 100%);
+  background: radial-gradient(circle at center, #ffffff 0%, #fefce8 100%);
 }
 
 .logo-text-group {
@@ -161,8 +168,8 @@ body {
   position: relative;
   /* Massive lavender ambient glow spreading outwards + luxury drop shadow */
   box-shadow: 
-    0 0 250px 100px rgba(167, 139, 250, 0.15), /* The massive lavender spotlight/glow */
-    0 30px 80px rgba(76, 29, 149, 0.08),       /* The physical drop shadow */
+    0 0 250px 100px rgba(253, 224, 71, 0.22), /* The massive lavender spotlight/glow */
+    0 30px 80px rgba(67, 55, 6, 0.08),       /* The physical drop shadow */
     inset 0 0 0 1px rgba(0,0,0,0.03); 
   display: flex;
   align-items: center;
@@ -191,7 +198,7 @@ body {
   right: 65px;
   width: 12px;
   height: 12px;
-  background: #a855f7; /* Purple dot */
+  background: #eab308; /* Lemon dot */
   border-radius: 50%;
   box-shadow: 
     -20px 0 0 #ef4444, /* Red dot */
@@ -619,7 +626,7 @@ body {
   font-weight: 800;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 2px rgba(76, 29, 149, 0.2);
+  -webkit-text-stroke: 2px rgba(67, 55, 6, 0.2);
   will-change: transform, letter-spacing;
 }
 
@@ -708,9 +715,9 @@ body {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(76, 29, 149, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(76, 29, 149, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(76, 29, 149, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(234, 179, 8, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
 }
 
 .location-pin span {
@@ -1004,7 +1011,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   text-align: center;
-  border-top: 1px solid rgba(76, 29, 149, 0.15);
+  border-top: 1px solid rgba(67, 55, 6, 0.15);
   padding-top: 60px;
 }
 
@@ -1109,10 +1116,10 @@ body {
   /* 1. Header */
   .hidden-header {
     padding: 16px 20px;
-    background: rgba(243, 240, 255, 0.85);
+    background: rgba(254, 252, 232, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    border-bottom: 1px solid rgba(202, 138, 4, 0.15);
   }
   
   .header-container {
@@ -1366,7 +1373,7 @@ body {
     -webkit-backdrop-filter: blur(12px);
     border-radius: 14px;
     padding: 10px 14px;
-    box-shadow: 0 10px 30px rgba(76, 29, 149, 0.15), 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(67, 55, 6, 0.15), 0 2px 8px rgba(0, 0, 0, 0.05);
     max-width: min(290px, 86vw);
     text-align: center;
     align-items: center;

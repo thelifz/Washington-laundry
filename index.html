@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WASHINGTON LAUNDRY</title>
+    <title>Lemon-dry | Premium Laundry & Dry Cleaning</title>
     <!-- GSAP & Plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
-    <link rel="stylesheet" href="style.css?v=39">
+    <link rel="stylesheet" href="style.css?v=40">
     <!-- Google Fonts for Luxury Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -33,14 +33,14 @@
             <section id="hero-sequence" style="position: relative; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                 
                 <!-- Background Image -->
-                <img id="hero-image" src="assets/about-bg.jpg" alt="Luxury Background" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1;">
+                <img id="hero-image" src="assets/about-bg.jpg" alt="Luxury Background" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; filter: hue-rotate(155deg) brightness(0.95) saturate(1.15);">
                 
                 <!-- Seamless Fade Overlay -->
-                <div id="video-darken-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to bottom, rgba(76,29,149,0.4) 0%, rgba(0,0,0,0.1) 60%, rgba(243,240,255,1) 100%); z-index: 5; pointer-events: none;"></div>
+                <div id="video-darken-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to bottom, rgba(67,55,6,0.38) 0%, rgba(0,0,0,0.15) 60%, rgba(254,252,232,1) 100%); z-index: 5; pointer-events: none;"></div>
 
                 <!-- Central Content -->
                 <div class="hero-center-content">
-                    <h1 class="vanish-text hero-brand-title">WASHINGTON</h1>
+                    <h1 class="vanish-text hero-brand-title">Lemon-dry</h1>
                     <p class="vanish-text hero-brand-sub">Premium Laundry & Dry Cleaning</p>
                     
                     <a href="#pricing-section" class="book-now-pill vanish-text">
@@ -51,7 +51,7 @@
                 <!-- Intro Layer (Splash Screen) -->
                 <div id="dark-intro">
                     <div class="logo-text-group">
-                        <h1 class="logo-text text-center">WASHINGTON</h1>
+                        <h1 class="logo-text text-center">Lemon-dry</h1>
                         <h2 class="logo-subtext text-center" style="color: var(--violet-light); margin-top: 20px; letter-spacing: 20px;">LAUNDRY</h2>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
             <!-- Title -->
             <div class="vanish-text about-title-block">
                 <p class="about-eyebrow">Who We Are</p>
-                <h2 class="section-title">The Washington<br>Promise</h2>
+                <h2 class="section-title">The Lemon-dry<br>Promise</h2>
             </div>
 
             <!-- About paragraphs -->
@@ -78,7 +78,7 @@
                         Our state-of-the-art facility runs <strong class="text-highlight">industrial-grade, modern washing machines</strong> engineered to handle everything from everyday casuals to the most delicate silk — all without compromising the fabric's integrity or colour.
                     </p>
                     <p class="about-text">
-                        We combine advanced textile science with a human touch — <strong class="text-highlight">precision, warmth, and zero shortcuts.</strong> That's the Washington Laundry way.
+                        We combine advanced textile science with a human touch — <strong class="text-highlight">precision, warmth, and zero shortcuts.</strong> That's the Lemon-dry way.
                     </p>
                 </div>
                 <div>
@@ -241,7 +241,7 @@
     <section id="how-it-works-section" class="luxury-section bg-secondary" style="position: relative; overflow: hidden; background: transparent;">
         
         <!-- GIANT BACKGROUND MATH WATERMARK -->
-        <div class="math-watermark" style="position: absolute; top: 20%; left: -10%; font-size: 12vw; font-family: 'Cinzel', serif; font-weight: 800; color: rgba(139, 92, 246, 0.03); white-space: nowrap; pointer-events: none; transform: rotate(-5deg);">
+        <div class="math-watermark" style="position: absolute; top: 20%; left: -10%; font-size: 12vw; font-family: 'Cinzel', serif; font-weight: 800; color: rgba(202, 138, 4, 0.04); white-space: nowrap; pointer-events: none; transform: rotate(-5deg);">
             ∫(Care)dt = ∞
         </div>
 
@@ -266,7 +266,7 @@
                             <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-main)" />
                         </marker>
                         <pattern id="grid" width="100" height="50" patternUnits="userSpaceOnUse">
-                            <path d="M 100 0 L 0 0 0 50" fill="none" stroke="rgba(139, 92, 246, 0.07)" stroke-width="1"/>
+                            <path d="M 100 0 L 0 0 0 50" fill="none" stroke="rgba(202, 138, 4, 0.12)" stroke-width="1"/>
                         </pattern>
                         <!-- Gradient for Area Glow -->
                         <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1">
@@ -361,7 +361,7 @@
                     <div class="location-pin" id="pin-orkkatteri">
                         <div class="pin-dot pulsing"></div>
                         <div class="pin-address">
-                            <strong>WASHINGTON LAUNDRY & DRY CLEANING</strong>
+                            <strong>LEMON-DRY LAUNDRY & DRY CLEANING</strong>
                             <span>Nadapuram-Vadakara Road, Near Sreekrishna Carwash</span>
                             <span>Orkkatteri, Kozhikode, Kerala 673501</span>
                         </div>
@@ -383,6 +383,6 @@
     </main>
 
     <!-- App Scripts -->
-    <script src="script.js?v=39"></script>
+    <script src="script.js?v=40"></script>
 </body>
 </html>
